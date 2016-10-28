@@ -1,0 +1,3 @@
+rootProject.name = 'gili'
+
+include ':app'
