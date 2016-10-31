@@ -4,35 +4,11 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {
-    AppRegistry,
-    StyleSheet,
-    Text,
-    View,
-    TouchableOpacity
-} from 'react-native';
+'use strict';
 
-import SearchModule from './src/module/SearchModule';
+var React = require('react-native');
+var {AppRegistry} = React;
 
-export default class gili extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-    render() {
-        return (
-            <View style={styles.container}>
-                <SearchModule />
-            </View>
-        );
-    }
-}
+var Routers = require('./src/router.android');
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-});
-
-AppRegistry.registerComponent('gili', () => gili);
+AppRegistry.registerComponent('RaindropReactNative', () => Routers);
